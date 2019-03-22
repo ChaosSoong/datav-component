@@ -1,0 +1,104 @@
+{
+  "name": "@heating-power/circle",
+  "version": "0.0.2",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "圆",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "300",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "width": {
+        "name": "宽",
+        "type": "number",
+        "default": 400,
+        "step": 1
+      },
+      "height": {
+        "name": "高",
+        "type": "number",
+        "default": 300,
+        "step": 5
+      },
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "rgba(255,0,0,0.04)"
+      },
+      "x": {
+        "name": "x坐标",
+        "type": "number",
+        "default": 200
+      },
+      "y": {
+        "name": "y坐标",
+        "type": "number",
+        "default": 150
+      },
+      "color": {
+        "name": "圆颜色",
+        "type": "color",
+        "default": "yellow"
+      },
+      "radius": {
+        "name": "半径",
+        "type": "number",
+        "default": 50
+      },
+      "lineWidth": {
+        "name": "线宽",
+        "type": "number",
+        "default": 10
+      },
+      "startingAngle": {
+        "name": "起始位置",
+        "type": "number",
+        "default": 0,
+        "step": 0.01,
+        "max": 2
+      },
+      "endingAngle": {
+        "name": "终止位置",
+        "type": "number",
+        "default": 2,
+        "max": 2,
+        "step": 0.01
+      },
+      "fillStyle": {
+        "name": "填充颜色",
+        "type": "color",
+        "default": "#ff0000"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}
