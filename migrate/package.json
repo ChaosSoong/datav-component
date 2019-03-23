@@ -1,9 +1,9 @@
 {
-  "name": "@namespace/migrate",
-  "version": "0.0.1",
+  "name": "@heating-power/migrate",
+  "version": "0.0.2",
   "dependencies": {
     "bcore": "0.0.18",
-    "echarts": "^4.2.1",
+    "echarts": "4.1.0",
     "jquery": "2.1.4",
     "lodash": "4.6.1"
   },
@@ -40,6 +40,137 @@
           10,
           100
         ]
+      },
+      "backgroundColor": {
+        "name": "背景颜色",
+        "type": "color",
+        "default": "rgba(64,74,89,0)"
+      },
+      "GeoitemStyleAreaColor": {
+        "name": "地图颜色",
+        "type": "color",
+        "default": "#3f5461"
+      },
+      "seriesItemStyle": {
+        "type": "group",
+        "name": "闪烁区域",
+        "children": {
+          "color": {
+            "type": "color",
+            "name": "颜色",
+            "default": "rgba(15,124,127,0.74)"
+          },
+          "radius": {
+            "name": "字号",
+            "type": "number",
+            "default": 28,
+            "range": [
+              10,
+              100
+            ],
+            "step": 1
+          },
+          "x": {
+            "name": "经度",
+            "type": "number",
+            "default": 120.4651,
+            "step": 0.001
+          },
+          "y": {
+            "name": "纬度",
+            "type": "number",
+            "default": 36.3373,
+            "step": 0.001
+          }
+        }
+      },
+      "lineItemStyle": {
+        "type": "group",
+        "name": "线条样式",
+        "children": {
+          "color": {
+            "type": "color",
+            "name": "颜色",
+            "default": "rgba(13,229,235,0.74)"
+          },
+          "width": {
+            "name": "线条宽度",
+            "type": "number",
+            "default": 0,
+            "range": [
+              0,
+              100
+            ],
+            "step": 0.5
+          },
+          "curveness": {
+            "name": "边的曲度",
+            "type": "number",
+            "default": 0.2,
+            "range": [
+              0,
+              1
+            ],
+            "step": 0.1
+          },
+          "label": {
+            "name": "是否显示标签",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "PointerItemStyle": {
+        "type": "group",
+        "name": "地理坐标点样式",
+        "children": {
+          "color": {
+            "type": "color",
+            "name": "颜色",
+            "default": "rgba(143,118,240,0.74)"
+          },
+          "size": {
+            "name": "半径",
+            "type": "number",
+            "default": 4,
+            "range": [
+              0,
+              100
+            ],
+            "step": 1
+          },
+          "label": {
+            "name": "是否显示标签",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "PlateItemStyle": {
+        "type": "group",
+        "name": "飞机样式",
+        "children": {
+          "color": {
+            "type": "color",
+            "name": "颜色",
+            "default": "rgba(9,11,11,0.74)"
+          },
+          "size": {
+            "name": "半径",
+            "type": "number",
+            "default": 10,
+            "range": [
+              0,
+              100
+            ],
+            "step": 1
+          },
+          "show": {
+            "name": "是否显示",
+            "type": "boolean",
+            "default": true
+          }
+        }
       }
     },
     "api_data": {

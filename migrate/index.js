@@ -216,147 +216,8 @@ var convertData = function(data) {
   return res
 }
 
-var color = ['#a6c84c', '#ffa022', '#46bee9']
 var series = []
-;[['青岛', QDData]].forEach(function(item, i) {
-  series.push(
-    {
-      name: item[0],
-      type: 'lines',
-      zlevel: 1,
-      effect: {
-        show: true,
-        period: 6,
-        trailLength: 0.5,
-        color: '#fff',
-        symbolSize: 3
-      },
-      lineStyle: {
-        normal: {
-          color: color[i],
-          width: 0,
-          curveness: 0.2
-        }
-      },
-      data: convertData(item[1])
-    },
-    {
-      name: item[0] + ' Top10',
-      type: 'lines',
-      zlevel: 2,
-      effect: {
-        show: true,
-        period: 6,
-        trailLength: 0,
-        symbol: planePath,
-        symbolSize: 10
-      },
-      lineStyle: {
-        normal: {
-          color: color[i],
-          width: 1,
-          opacity: 0.4,
-          curveness: 0.2
-        }
-      },
-      data: convertData(item[1])
-    },
-    {
-      name: item[0] + ' Top10',
-      type: 'effectScatter',
-      coordinateSystem: 'geo',
-      zlevel: 2,
-      rippleEffect: {
-        brushType: 'stroke'
-      },
-      label: {
-        normal: {
-          show: false,
-          position: 'right',
-          formatter: '{b}'
-        }
-      },
-      symbolSize: function(val) {
-        return val[2] / 8
-      },
-      itemStyle: {
-        normal: {
-          color: color[i]
-        }
-      },
-      data: item[1].map(function(dataItem) {
-        return {
-          name: dataItem[1].name,
-          value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
-        }
-      })
-    }
-  )
-})
-series.push({
-  name: '青岛',
-  type: 'effectScatter',
-  coordinateSystem: 'geo',
-  symbolSize: 16,
-  data: [
-    {
-      name: '青岛',
-      value: [120.4651, 36.3373]
-    }
-  ],
-  itemStyle: {
-    normal: {
-      color: '#00ffff'
-    }
-  }
-})
-option = {
-  backgroundColor: '#404a59',
-  // title: {
-  //   text: '模拟迁徙',
-  //   subtext: '数据纯属虚构',
-  //   left: 'center',
-  //   textStyle: {
-  //     color: '#fff'
-  //   }
-  // },
-  tooltip: {
-    trigger: 'none'
-  },
-  // legend: {
-  //   orient: 'vertical',
-  //   top: 'bottom',
-  //   left: 'right',
-  //   data: ['北京 Top10', '上海 Top10', '广州 Top10'],
-  //   textStyle: {
-  //     color: '#fff'
-  //   },
-  //   selectedMode: 'single'
-  // },
-  geo: {
-    map: 'china',
-    label: {
-      emphasis: {
-        show: false
-      },
-      normal: {
-        show: false
-      }
-    },
-    regions: [],
-    roam: false,
-    itemStyle: {
-      normal: {
-        areaColor: '#323c48',
-        borderColor: '#404a59'
-      },
-      emphasis: {
-        areaColor: '#2a333d'
-      }
-    }
-  },
-  series: series
-}
+
 /**
  * 马良基础类
  */
@@ -397,6 +258,156 @@ module.exports = Event.extend(
       //更新图表
       //this.chart.render(data, cfg);
       // this.container.html(data[0].value)
+      series = []
+      let self = this
+      var color = [
+        self.config.lineItemStyle.color,
+        self.config.PointerItemStyle.color,
+        '#46bee9'
+      ]
+      ;[['青岛', QDData]].forEach(function(item, i) {
+        series.push(
+          {
+            name: item[0],
+            type: 'lines',
+            zlevel: 1,
+            effect: {
+              show: true,
+              period: 6,
+              trailLength: 0.5,
+              color: '#fff',
+              symbolSize: 3
+            },
+            lineStyle: {
+              normal: {
+                color: color[i],
+                width: self.config.lineItemStyle.width,
+                curveness: self.config.lineItemStyle.curveness
+              }
+            },
+            data: convertData(item[1])
+          },
+          //飞机样式
+          {
+            name: item[0] + ' Top10',
+            type: 'lines',
+            zlevel: 2,
+            effect: {
+              show: self.config.PlateItemStyle.show,
+              period: 6,
+              trailLength: 0,
+              symbol: planePath,
+              symbolSize: self.config.PlateItemStyle.size
+            },
+            lineStyle: {
+              normal: {
+                color: color[i],
+                width: 1,
+                opacity: 0.4,
+                curveness: 0.2
+              }
+            },
+            data: convertData(item[1])
+          },
+          //地理坐标点
+          {
+            name: item[0] + ' Top10',
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            zlevel: 2,
+            rippleEffect: {
+              brushType: 'stroke'
+            },
+            label: {
+              normal: {
+                show: self.config.lineItemStyle.label,
+                position: 'right',
+                formatter: '{b}',
+                color: self.config.PointerItemStyle.color
+              }
+            },
+            symbolSize: self.config.PointerItemStyle.size,
+            itemStyle: {
+              normal: {
+                color: self.config.PointerItemStyle.color
+              }
+            },
+            data: item[1].map(function(dataItem) {
+              return {
+                name: dataItem[1].name,
+                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+              }
+            })
+          }
+        )
+      })
+      series.push({
+        name: '青岛',
+        type: 'effectScatter',
+        coordinateSystem: 'geo',
+        symbolSize: this.config.seriesItemStyle.radius,
+        data: [
+          {
+            name: '青岛',
+            value: [
+              this.config.seriesItemStyle.x,
+              this.config.seriesItemStyle.y
+            ]
+          }
+        ],
+        itemStyle: {
+          normal: {
+            color: this.config.seriesItemStyle.color
+          }
+        }
+      })
+      option = {
+        backgroundColor: this.config.backgroundColor,
+        // title: {
+        //   text: '模拟迁徙',
+        //   subtext: '数据纯属虚构',
+        //   left: 'center',
+        //   textStyle: {
+        //     color: '#fff'
+        //   }
+        // },
+        tooltip: {
+          trigger: 'none'
+        },
+        // legend: {
+        //   orient: 'vertical',
+        //   top: 'bottom',
+        //   left: 'right',
+        //   data: ['北京 Top10', '上海 Top10', '广州 Top10'],
+        //   textStyle: {
+        //     color: '#fff'
+        //   },
+        //   selectedMode: 'single'
+        // },
+        geo: {
+          map: 'china',
+          label: {
+            emphasis: {
+              show: false
+            },
+            normal: {
+              show: false
+            }
+          },
+          regions: [],
+          roam: false,
+          itemStyle: {
+            normal: {
+              areaColor: this.config.GeoitemStyleAreaColor,
+              borderColor: '#404a59'
+            },
+            emphasis: {
+              areaColor: '#2a333d'
+            }
+          }
+        },
+        series: series
+      }
       this.chart.setOption(option)
       //如果有需要的话,更新样式
       this.updateStyle()
