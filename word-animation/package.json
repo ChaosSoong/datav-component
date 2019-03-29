@@ -1,0 +1,82 @@
+{
+  "name": "@heating-power/word-animation",
+  "version": "0.0.3",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "文字放大缩小动画",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "min": {
+        "name": "最小字号",
+        "type": "number",
+        "default": 20,
+        "range": [
+          1,
+          1000
+        ],
+        "step": 1
+      },
+      "max": {
+        "name": "最大字号",
+        "type": "number",
+        "default": 40,
+        "range": [
+          1,
+          1000
+        ],
+        "step": 1
+      },
+      "color": {
+        "name": "颜色",
+        "type": "color",
+        "default": "#f8f3f3"
+      },
+      "font-weight": {
+        "name": "加粗",
+        "type": "boolean",
+        "default": true
+      },
+      "duration": {
+        "name": "周期秒数",
+        "type": "number",
+        "default": 2,
+        "range": [
+          1,
+          1000
+        ]
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}
