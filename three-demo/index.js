@@ -3,7 +3,9 @@ var $ = require('jquery')
 var _ = require('lodash')
 //var Chart = require('XXX');
 var THREE = require('three')
-console.log(THREE)
+// require("./utils/GeometryUtils")
+// require("./utils/init")
+console.log(THREE.GeometryUtils)
 
 /**
  * 马良基础类
@@ -19,8 +21,6 @@ module.exports = Event.extend(
       .toString(36)
       .substr(2)
     canvas.id = random
-    // canvas.width = 400
-    // canvas.height = 300
     this.container.append(canvas)
     this.renderer = new THREE.WebGLRenderer({
       canvas: document.getElementById(random)
@@ -33,14 +33,13 @@ module.exports = Event.extend(
     this.scene.add(this.camera)
 
     // a cube in the scene
-    var cube = new THREE.Mesh(
-      new THREE.CubeGeometry(1, 2, 3),
+    this.cube = new THREE.Mesh(
+      new THREE.CubeGeometry(2, 2, 2),
       new THREE.MeshBasicMaterial({
         color: 0xff0000
       })
     )
-    this.scene.add(cube)
-
+    this.scene.add(this.cube)
     this.apis = config.apis //hook一定要有
     this._data = null //数据
     this.chart = null //图表
@@ -74,6 +73,14 @@ module.exports = Event.extend(
       // this.container.html(data[0].value)
       // render
       this.renderer.render(this.scene, this.camera)
+      var that = this
+      function render() {
+        requestAnimationFrame(render);
+        that.cube.rotation.x += 0.001;
+        that.cube.rotation.y += 0.001;
+        that.renderer.render(that.scene, that.camera);
+      }
+      render()
       //如果有需要的话,更新样式
       this.updateStyle()
     },

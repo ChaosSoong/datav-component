@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "dependencies": {
     "bcore": "0.0.18",
+    "cesium": "1.56.1",
     "jquery": "2.1.4",
     "lodash": "4.6.1",
-    "three": "^0.102.1"
+    "three": "0.102.1"
   },
   "datav": {
     "cn_name": "threejs小demo",
