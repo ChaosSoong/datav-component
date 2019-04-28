@@ -1,0 +1,88 @@
+{
+  "name": "@heating-power/image-left-hide",
+  "version": "0.0.2",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "图片轮播左滑隐藏",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 22,
+        "range": [
+          10,
+          100
+        ]
+      },
+      "image1":{
+        "name": "图片一",
+        "type":"image",
+        "default":"https://s2.ax1x.com/2019/04/24/EVg8Lq.png"
+      },
+      "image2":{
+        "name": "图片二",
+        "type":"image",
+        "default":"https://s2.ax1x.com/2019/04/24/EV21hD.png"
+      },
+      "image3":{
+        "name": "图片三",
+        "type":"image",
+        "default":"https://s2.ax1x.com/2019/04/24/EV20N8.png"
+      },
+      "move_left":{
+        "name":"向左平移",
+        "type": "number",
+        "default": 250
+      },
+      "width":{
+        "name":"宽度",
+        "type": "number",
+        "default": 250
+      },
+      "time":{
+        "name":"动画时长",
+        "type": "number",
+        "default": 2
+      },
+      "opcity":{
+        "name":"隐藏效果",
+        "type": "number",
+        "default": 0,
+        "step": 0.2
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}

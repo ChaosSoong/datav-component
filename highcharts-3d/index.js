@@ -1,8 +1,8 @@
 var Event = require('bcore/event');
 var $ = require('jquery');
 var _ = require('lodash');
-var Highcharts = require('highcharts')
-require('highcharts/highcharts-3d')(Highcharts)
+// var Highcharts = require('highcharts')
+// require('highcharts/highcharts-3d')(Highcharts)
 //var Chart = require('XXX');
 
 /**
@@ -44,48 +44,48 @@ module.exports = Event.extend(function Base(container, config) {
     data = this.data(data);
     var cfg = this.mergeConfig(config);
     //更新图表
-    //this.chart.render(data, cfg);
-    var chart = new Highcharts.Chart({
-      chart: {
-          renderTo: this.containerId,
-          type: 'column',
-          options3d: {
-              enabled: true,
-              alpha: 15,
-              beta: 15,
-              depth: 50,
-              viewDistance: 25
-          }
-      },
-      title: {
-          text: '3D柱状图'
-      },
-      plotOptions: {
-          column: {
-              depth: 25
-          }
-      },
-      series: [{
-          name:'图例1',
-          data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-      }],
-      credits: {
-        // enabled:true,                    // 默认值，如果想去掉版权信息，设置为false即可
-        text: '车主邦',             // 显示的文字
-        href: 'http://www.czb365.com',      // 链接地址
-        // position: {                         // 位置设置 
-        //     align: 'left',
-        //     x: 400,
-        //     verticalAlign: 'bottom',
-        //     y: -100
-        // },
-        // style: {                            // 样式设置
-        //     cursor: 'pointer',
-        //     color: 'red',
-        //     fontSize: '30px'
-        // }
-    }
-  });
+  //   //this.chart.render(data, cfg);
+  //   var chart = new Highcharts.Chart({
+  //     chart: {
+  //         renderTo: this.containerId,
+  //         type: 'column',
+  //         options3d: {
+  //             enabled: true,
+  //             alpha: 15,
+  //             beta: 15,
+  //             depth: 50,
+  //             viewDistance: 25
+  //         }
+  //     },
+  //     title: {
+  //         text: '3D柱状图'
+  //     },
+  //     plotOptions: {
+  //         column: {
+  //             depth: 25
+  //         }
+  //     },
+  //     series: [{
+  //         name:'图例1',
+  //         data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+  //     }],
+  //     credits: {
+  //       // enabled:true,                    // 默认值，如果想去掉版权信息，设置为false即可
+  //       text: '车主邦',             // 显示的文字
+  //       href: 'http://www.czb365.com',      // 链接地址
+  //       // position: {                         // 位置设置 
+  //       //     align: 'left',
+  //       //     x: 400,
+  //       //     verticalAlign: 'bottom',
+  //       //     y: -100
+  //       // },
+  //       // style: {                            // 样式设置
+  //       //     cursor: 'pointer',
+  //       //     color: 'red',
+  //       //     fontSize: '30px'
+  //       // }
+  //   }
+  // });
     // this.container.html(data[0].value)
     //如果有需要的话,更新样式
     this.updateStyle();

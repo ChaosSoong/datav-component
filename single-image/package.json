@@ -1,0 +1,64 @@
+{
+  "name": "@heating-power/single-image",
+  "version": "0.0.2",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "单张图片闪烁",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "media_image"
+    ],
+    "view": {
+      "width": 455,
+      "height": 200,
+      "minWidth": 200,
+      "minHeight": 100
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "time": {
+        "name": "时间间隔",
+        "type": "number",
+        "default": 1,
+        "step": 0.1
+      },
+      "width": {
+        "name": "宽度",
+        "type": "number",
+        "default": 500
+      },
+      "height": {
+        "name": "时间间隔",
+        "type": "number",
+        "default": 208
+      },
+      "img": {
+        "name": "图片",
+        "type": "image",
+        "default": "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3050222228,1986437060&fm=58&bpow=500&bpoh=500"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}

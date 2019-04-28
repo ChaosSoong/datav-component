@@ -1,0 +1,67 @@
+{
+  "name": "@heating-power/datav-czb",
+  "version": "0.0.2",
+  "dependencies": {
+    "MD5": "1.3.0",
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "datav-czb",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      },
+      "source1": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value1": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 22,
+        "range": [
+          10,
+          100
+        ]
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ],
+      "source1": [
+        {
+          "value1": "值1"
+        }
+      ]
+    }
+  }
+}

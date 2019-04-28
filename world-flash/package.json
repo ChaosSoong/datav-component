@@ -1,0 +1,91 @@
+{
+  "name": "@heating-power/world-flash",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "echarts": "^4.2.1",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "世界地图闪烁效果",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "600",
+      "height": "400",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "zoom": {
+        "name": "当前缩放比例",
+        "type": "number",
+        "default": 4,
+        "step": 0.2
+      },
+      "scaleLimitMin": {
+        "name": "最小缩放比例",
+        "type": "number",
+        "default": 1
+      },
+      "scaleLimitMax": {
+        "name": "最大缩放比例",
+        "type": "number",
+        "default": 20,
+        "step": 1
+      },
+      "time": {
+        "name": "动画时间",
+        "type": "number",
+        "default": 3
+      },
+      "areaColor": {
+        "name": "地图底色",
+        "type": "color",
+        "default": "#454C50"
+      },
+      "borderColor": {
+        "name": "地图边框颜色",
+        "type": "color",
+        "default": "#111"
+      },
+      "labelShow": {
+        "name": "是否显示国家标签",
+        "type": "boolean",
+        "default": true
+      },
+      "labelColor": {
+        "name": "国家标签颜色",
+        "type": "color",
+        "default": "#fff"
+      },
+      "regionsAreaColor": {
+        "name": "高亮底色",
+        "type": "color",
+        "default": "#129AE7"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}

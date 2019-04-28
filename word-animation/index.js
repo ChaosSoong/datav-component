@@ -47,6 +47,7 @@ module.exports = Event.extend(
         .substr(2)
       this.container.html(data[0].value)
       this.container.css('color', this.config['color'])
+      this.container.css('line-height', this.config['line_height']?"1px":'')
       this.container.css(
         'font-weight',
         this.config['font-weight'] ? 'bold' : ''

@@ -1,0 +1,81 @@
+{
+  "name": "@heating-power/image-swiper",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "图片跑马灯",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "left_right": {
+        "name": "左右间隔",
+        "type": "number",
+        "default": 22,
+        "range": [
+          0,
+          1000
+        ]
+      },
+      "top_bottom": {
+        "name": "上下间隔",
+        "type": "number",
+        "default": 22,
+        "range": [
+          0,
+          1000
+        ]
+      },
+      "image1":{
+        "name": "图片一",
+        "type":"image",
+        "default":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3050222228,1986437060&fm=58&bpow=500&bpoh=500"
+      },
+      "image2":{
+        "name": "图片二",
+        "type":"image",
+        "default":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3050222228,1986437060&fm=58&bpow=500&bpoh=500"
+      },
+      "image3":{
+        "name": "图片三",
+        "type":"image",
+        "default":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3050222228,1986437060&fm=58&bpow=500&bpoh=500"
+      },
+      "image4":{
+        "name": "图片四",
+        "type":"image",
+        "default":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3050222228,1986437060&fm=58&bpow=500&bpoh=500"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}

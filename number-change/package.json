@@ -1,0 +1,98 @@
+{
+  "name": "@heating-power/number-change",
+  "version": "0.1.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "变化的数字",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 100
+      },
+      "color": {
+        "name": "颜色",
+        "type": "color",
+        "default": "#2234f8"
+      },
+      "spaceing": {
+        "name": "字间距",
+        "type": "number",
+        "default": 5
+      },
+      "delay": {
+        "name": "时间间隔",
+        "type": "number",
+        "default": 2
+      },
+      "max": {
+        "name": "变化最大值",
+        "type": "number",
+        "default": 3
+      },
+      "start": {
+        "name": "开始",
+        "type": "number",
+        "default": 8
+      },
+      "end": {
+        "name": "结束",
+        "type": "number",
+        "default": 24
+      },
+      "weight": {
+        "name": "是否加粗",
+        "type": "boolean",
+        "default": true
+      },
+      "font_family": {
+        "name": "字体",
+        "type": "hidden",
+        "default": "/resources/DS-DIGI.ttf"
+      },
+      "font": {
+        "name": "是否数字化",
+        "type": "boolean",
+        "default": true
+      },
+      "replace": {
+        "name": "是否替换1",
+        "type": "boolean",
+        "default": true
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "20985123"
+        }
+      ]
+    }
+  }
+}

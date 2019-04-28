@@ -1,0 +1,72 @@
+{
+  "name": "@heating-power/word-flash",
+  "version": "0.0.2",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1"
+  },
+  "datav": {
+    "cn_name": "文字闪烁",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 40,
+        "range": [
+          10,
+          1000
+        ]
+      },
+      "color": {
+        "name": "颜色",
+        "type": "color",
+        "default": "#fff"
+      },
+      "delay": {
+        "name": "延迟执行秒数",
+        "type": "number",
+        "default": 1
+      },
+      "show_time": {
+        "name": "显示秒数",
+        "type": "number",
+        "default": 3
+      },
+      "hide_time": {
+        "name": "掩藏秒数",
+        "type": "number",
+        "default": 1
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "车主邦"
+        }
+      ]
+    }
+  }
+}

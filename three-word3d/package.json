@@ -1,0 +1,62 @@
+{
+  "name": "@namespace/three-word3d",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1",
+    "three": "0.103.0"
+  },
+  "datav": {
+    "cn_name": "three三维文字",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "1000",
+      "height": "600",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 60,
+        "range": [
+          10,
+          1000
+        ]
+      },
+      "height": {
+        "name": "高度",
+        "type": "number",
+        "default": 20,
+        "range": [
+          10,
+          1000
+        ]
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "值"
+        }
+      ]
+    }
+  }
+}

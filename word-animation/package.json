@@ -1,6 +1,6 @@
 {
   "name": "@heating-power/word-animation",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "bcore": "0.0.18",
     "jquery": "2.1.4",
@@ -58,6 +58,11 @@
       },
       "font-weight": {
         "name": "加粗",
+        "type": "boolean",
+        "default": true
+      },
+      "line_height": {
+        "name": "放大位置偏移",
         "type": "boolean",
         "default": true
       },

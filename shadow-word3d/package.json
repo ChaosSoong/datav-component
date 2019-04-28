@@ -1,0 +1,62 @@
+{
+  "name": "@heating-power/word-3d",
+  "version": "0.0.2",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1",
+    "three": "0.102.1"
+  },
+  "datav": {
+    "cn_name": "三维文字",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "1000",
+      "height": "200",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "文字"
+          },
+          "shadow": {
+            "description": "阴影"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 80,
+        "range": [
+          10,
+          1000
+        ]
+      },
+      "color": {
+        "name": "颜色",
+        "type": "color",
+        "default": "#fff"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "全球最大的能源在线零售商",
+          "shadow": ["0px 0px 0 #FAFAFA", "1px -1px 0 #FAFAFA", "2px -2px 0 #F2F2F2", "3px -3px 0 #E6E6E6", "4px -4px 0 #D8D8D8", "5px -5px 0 #BDBDBD", "6px -6px 0 #A4A4A4", "7px -7px 0 #848484", "8px -8px 0 #6E6E6E", "9px -9px 0 #585858", "10px -10px 0 #424242", "11px -11px 0 #2E2E2E", "12px -12px 0 #1C1C1C", "13px -13px 12px rgba(0, 0, 0, 0.55)", "13px -13px 1px rgba(0, 0, 0, 0.5)"]
+        }
+      ]
+    }
+  }
+}
