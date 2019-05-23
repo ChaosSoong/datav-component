@@ -4,7 +4,7 @@
   "dependencies": {
     "bcore": "0.0.18",
     "highcharts": "7.1.0",
-    "jquery": "2.1.4",
+    "jquery": "3.4.0",
     "lodash": "4.6.1"
   },
   "datav": {
