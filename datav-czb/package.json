@@ -4,7 +4,7 @@
   "dependencies": {
     "MD5": "1.3.0",
     "bcore": "0.0.18",
-    "jquery": "2.1.4",
+    "jquery": "3.5.0",
     "lodash": "4.6.1"
   },
   "datav": {
