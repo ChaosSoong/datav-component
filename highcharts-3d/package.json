@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "dependencies": {
     "bcore": "0.0.18",
-    "highcharts": "7.1.0",
+    "highcharts": "9.0.0",
     "jquery": "2.1.4",
     "lodash": "4.6.1"
   },
